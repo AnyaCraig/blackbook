@@ -1,5 +1,6 @@
 const DB_URI = process.env.DB_URI || 'mongodb://localhost:27017/blackbook';
 const PORT = process.env.PORT || '8080';
+const { makeSeeds } = require('./seeds');
 
 console.log("DB RUI", DB_URI);
 
@@ -62,6 +63,7 @@ mongoose
   .connect(DB_URI)
   .then(() => {
     console.log(`Successfully connected to: ${DB_URI}`);
+    return makeSeeds();
   })
   .catch((err) => console.log(err.message));
 

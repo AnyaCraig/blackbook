@@ -23,7 +23,7 @@ const truncateDatabase = async () => {
 const makeSeeds = async () => {
     
     // connect to the Mongo database
-    await mongoose.connect(uri);
+    // await mongoose.connect(uri);
 
     // delete all the old data in the database
     await truncateDatabase();
@@ -40,7 +40,7 @@ const makeSeeds = async () => {
 
     console.log("WE SAVED THEM ALL");
     // close the database connection
-    mongoose.connection.close();
+    // mongoose.connection.close();
 }
 
-makeSeeds(); 
+exports.makeSeeds = makeSeeds;
