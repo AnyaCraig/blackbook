@@ -3,6 +3,7 @@
 const User = require('../models/User');
 const Contact = require('../models/Contact');
 const Address = require('../models/Address');
+const { DB_URI } = require('../index');
 
 console.log("USER", User);
 
@@ -12,7 +13,6 @@ const { addresses } = require('./addresses');
 
 const mongoose = require('mongoose');
 
-const uri = "mongodb://localhost:27017/blackbook";
 
 // delete all current items in our database for all our entities
 const truncateDatabase = async () => {
@@ -23,7 +23,7 @@ const truncateDatabase = async () => {
 const makeSeeds = async () => {
     
     // connect to the Mongo database
-    await mongoose.connect(uri);
+    await mongoose.connect(DB_URI);
 
     // delete all the old data in the database
     await truncateDatabase();

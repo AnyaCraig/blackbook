@@ -1,5 +1,5 @@
-const DB_URI = process.env.DB_URI || 'mongodb://localhost:27017/blackbook';
-const PORT = process.env.PORT || '8080';
+export const DB_URI = process.env.DB_URI || 'mongodb://localhost:27017/blackbook';
+export const PORT = process.env.PORT || '8080';
 
 
 if(process.env.NODE_ENV !== 'production') {
@@ -62,3 +62,12 @@ mongoose
     console.log(`Successfully connected to: ${DB_URI}`);
   })
   .catch((err) => console.log(err.message));
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('./build'));
+  // only add this part if you are using React Router
+  app.get('*', (req,res) =>{
+      console.log(path.join(__dirname+'/build/index.html'));
+      res.sendFile(path.join(__dirname+'/build/index.html'));
+  });
+}
