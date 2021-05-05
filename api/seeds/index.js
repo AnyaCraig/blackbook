@@ -3,7 +3,7 @@
 const User = require('../models/User');
 const Contact = require('../models/Contact');
 const Address = require('../models/Address');
-const { DB_URI } = require('../index');
+const { uri } = require('../index');
 
 console.log("USER", User);
 
@@ -23,7 +23,7 @@ const truncateDatabase = async () => {
 const makeSeeds = async () => {
     
     // connect to the Mongo database
-    await mongoose.connect(DB_URI);
+    await mongoose.connect(uri);
 
     // delete all the old data in the database
     await truncateDatabase();
