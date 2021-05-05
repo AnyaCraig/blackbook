@@ -1,5 +1,5 @@
-export const DB_URI = process.env.DB_URI || 'mongodb://localhost:27017/blackbook';
-export const PORT = process.env.PORT || '8080';
+const DB_URI = process.env.DB_URI || 'mongodb://localhost:27017/blackbook';
+const PORT = process.env.PORT || '8080';
 
 
 if(process.env.NODE_ENV !== 'production') {
@@ -71,3 +71,5 @@ if (process.env.NODE_ENV === 'production') {
       res.sendFile(path.join(__dirname+'/build/index.html'));
   });
 }
+
+exports.uri = DB_URI;
