@@ -1,6 +1,8 @@
 const DB_URI = process.env.DB_URI || 'mongodb://localhost:27017/blackbook';
 const PORT = process.env.PORT || '8080';
 
+console.log("DB RUI", DB_URI);
+
 
 if(process.env.NODE_ENV !== 'production') {
 
