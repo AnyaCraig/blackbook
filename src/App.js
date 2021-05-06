@@ -1,14 +1,35 @@
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
 
 import './App.css';
-import { List } from './List';
+
 import { ContactsList } from './ContactsList';
+import { List } from './List';
 
 function App() {
   return (
     <div className="App">
-      <p>Hello!</p>
-      <List></List>
-      <ContactsList></ContactsList>
+      <Router>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={props => {
+              return <ContactsList {...props} />;
+            }}
+          />
+          <Route
+            exact
+            path="/addresses"
+            render={props => {
+              return <List {...props} />;
+            }}
+          />
+        </Switch>
+      </Router>
     </div>
   );
 }

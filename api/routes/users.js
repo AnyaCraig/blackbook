@@ -2,8 +2,6 @@ const express = require('express');
 
 const usersRouter = express.Router();
 
-
-
 usersRouter.route('/')
   .get((req, res, next) => {
     res.json({

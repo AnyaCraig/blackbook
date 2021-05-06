@@ -16,6 +16,4 @@ const owen = new User({
 
 users.push(anya, owen);
 
-console.log("USERS", users);
-
 module.exports = users;

@@ -7,7 +7,7 @@ const contacts = [];
 
 const emilyLockhart = new Contact({
   firstName: "Emily",
-  lastName: "Lockhart",
+  lastName: "Lickhart",
   address: address1,
   birthdate: new Date('May 27 1983'),
   email: "emily.lockhart@gmail.com",
@@ -16,7 +16,7 @@ const emilyLockhart = new Contact({
 
 const annCatton = new Contact({
   firstName: "Ann",
-  lastName: "Catton",
+  lastName: "Cotton",
   address: address4,
   birthdate: new Date('August 15 1980'),
   email: "ann.catton@gmail.com",
@@ -25,7 +25,7 @@ const annCatton = new Contact({
 
 const jeremyWeyerman = new Contact({
   firstName: "Jeremy",
-  lastName: "Weyerman",
+  lastName: "Wayerman",
   address: address7,
   birthdate: new Date('June 18 1981'),
   email: "jeremy.weyerman@gmail.com",
@@ -33,7 +33,7 @@ const jeremyWeyerman = new Contact({
 });
 
 const donMacDonald = new Contact({
-  firstName: "Don",
+  firstName: "Dan",
   lastName: "MacDonald",
   address: address6,
   birthdate: new Date('October 30 1954'),
@@ -43,7 +43,7 @@ const donMacDonald = new Contact({
 
 const meganSampson = new Contact({
   firstName: "Megan",
-  lastName: "Sampson",
+  lastName: "Simpson",
   address: address4,
   birthdate: new Date('January 24 1983'),
   email: "megan.sampson@gmail.com",
@@ -52,7 +52,7 @@ const meganSampson = new Contact({
 
 const ainslieKeith = new Contact({
   firstName: "Ainslie",
-  lastName: "Keith",
+  lastName: "Kooth",
   address: address4,
   birthdate: new Date('January 21 1983'),
   email: "ainslie.keith@gmail.com",
@@ -61,7 +61,7 @@ const ainslieKeith = new Contact({
 
 const ruthCraig = new Contact({
   firstName: "Ruth",
-  lastName: "Craig",
+  lastName: "Crog",
   address: address3,
   birthdate: new Date('September 19 1928'),
   email: "ruth.craig@gmail.com",
@@ -69,7 +69,7 @@ const ruthCraig = new Contact({
 });
 
 const sandyHenry = new Contact({
-  firstName: "Sandy",
+  firstName: "Sandra",
   lastName: "Henry",
   address: address5,
   birthdate: new Date('May 30 1926'),
@@ -79,7 +79,7 @@ const sandyHenry = new Contact({
 
 const benRosenblum = new Contact({
   firstName: "Ben",
-  lastName: "Rosenblum",
+  lastName: "Raisinblum",
   address: address1,
   birthdate: new Date('June 27 1982'),
   email: "ben.rosenblum@gmail.com",
@@ -87,7 +87,7 @@ const benRosenblum = new Contact({
 });
 
 const debIrwin = new Contact({
-  firstName: "Deb",
+  firstName: "Dob",
   lastName: "Irwin",
   address: address2,
   birthdate: new Date('December 21 1953'),

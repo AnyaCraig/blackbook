@@ -1,7 +1,7 @@
 
 const express = require('express');
 const Contact = require('../models/Contact');
-// const { get } = require('mongoose');
+
 
 const contactsRouter = express.Router();
 
@@ -20,7 +20,7 @@ contactsRouter.route('/')
       next(err);
     }
   })
-  .post((req,res) => {
+  .post(async (req,res) => {
 
     res.json({
       data: {
@@ -29,6 +29,18 @@ contactsRouter.route('/')
         payload: req.body,
       }
     })
+  });
+
+  contactsRouter.route('/:id')
+  .delete(async (req,res, next) => {
+    const { id } = req.params;
+
+    try {
+      const doc = await Contact.findByIdAndDelete(id);
+      res.status(204).send(doc)
+    } catch (e) {
+      next(e)
+    }
   });
 
 module.exports = contactsRouter;
